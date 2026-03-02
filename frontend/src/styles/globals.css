@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply smooth;
+}
+
+body {
+  background-color: #faf5f0;
+  @apply text-dark overflow-x-hidden;
+}
+
+/* Glassmorphism */
+.glass {
+  @apply backdrop-blur-glass bg-white/40 border border-accent/20 rounded-2xl shadow-glass;
+}
+
+.glass-dark {
+  @apply backdrop-blur-glass bg-secondary/60 border border-accent/30 rounded-2xl shadow-glass;
+}
+
+/* Warm accent effects */
+.neon-glow {
+  @apply shadow-glow;
+}
+
+.neon-glow-pink {
+  @apply shadow-glow-neon;
+}
+
+/* Text effects */
+.gradient-text {
+  background: linear-gradient(to right, #a0826d, #9d7e6f, #8b7355);
+  @apply bg-clip-text text-transparent;
+}
+
+/* Smooth duration */
+.smooth {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Animation utilities */
+.animate-pulse-glow {
+  animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(160, 130, 109, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(160, 130, 109, 0.25);
+  }
+}
+
+/* Hover effects */
+.card-hover {
+  @apply cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg;
+}
+
+.btn-hover {
+  @apply relative overflow-hidden transition-all duration-300;
+}
+
+.btn-hover::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-r from-accent to-neon opacity-0 transition-opacity duration-300;
+  z-index: -1;
+}
+
+.btn-hover:hover::before {
+  @apply opacity-20;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-accent rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neon;
+}
