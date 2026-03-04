@@ -1,6 +1,6 @@
 # 🚀 EventHub - College Event Management Portal
 
-A production-level event management system with role-based access, beautiful animations, and a modern SaaS aesthetic.
+A production-level event management system with role-based access
 
 ## 📋 Features
 
