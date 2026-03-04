@@ -18,6 +18,7 @@ app.use(express.json());
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/events", eventRoutes);
+app.use(express.static("frontend"));
 
 // Health check
 app.get("/api/health", (req, res) => {
