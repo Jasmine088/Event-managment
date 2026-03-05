@@ -1,0 +1,265 @@
+
+body{
+margin:0;
+font-family:Segoe UI;
+background:#050914;
+color:white;
+overflow-x:hidden;
+}
+
+
+.logo{
+position:fixed;
+top:25px;
+left:40px;
+font-size:22px;
+color:#7aa2ff;
+}
+
+
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+top:25px;
+left:50%;
+transform:translateX(-50%);
+
+display:flex;
+align-items:center;
+gap:30px;
+
+padding:12px 30px;
+
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+
+border-radius:40px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.6);
+animation: navDrop 0.8s ease-out;
+animation-delay:1s;
+animation-fill-mode:forwards;
+
+opacity:0;
+}
+
+@keyframes navDrop{
+
+from{
+transform:translate(-50%, -80px);
+opacity:0;
+}
+
+to{
+transform:translate(-50%, 0);
+opacity:1;
+}
+
+}
+/* NAV LINKS */
+
+.nav-links{
+display:flex;
+gap:35px;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.nav-links li{
+cursor:pointer;
+opacity:0.85;
+transition:0.3s;
+}
+
+.nav-links li:hover{
+color:#7aa2ff;
+}
+
+
+
+.signup{
+padding:8px 18px;
+
+border-radius:20px;
+border:none;
+
+background:#5c8dff;
+color:white;
+
+font-size:14px;
+cursor:pointer;
+
+box-shadow:0 5px 15px rgba(92,141,255,0.6);
+
+transition:0.3s;
+}
+
+.signup:hover{
+transform:scale(1.05);
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+}
+
+
+ .hero h1{ 
+font-family:'Asset', sans-serif;
+font-size:60px;
+line-height:0.1;
+animation: slideFromLeft 1s ease-out;
+} 
+ .hero h2{ 
+font-family:'Asset', sans-serif;
+font-size:60px;
+line-height:0.2;
+animation: slideFromRight 1s ease-out;
+} 
+@keyframes slideFromRight{
+
+from{
+transform:translateX(150px);
+opacity:0;
+}
+
+to{
+transform:translateX(0);
+opacity:1;
+}
+
+}
+@keyframes slideFromLeft{
+
+from{
+transform:translateX(-150px);
+opacity:0;
+}
+
+to{
+transform:translateX(0);
+opacity:1;
+}
+
+}
+
+
+/* HERO TEXT */
+.hero p{
+margin-top:15px;
+opacity:0.8;
+font-size:18px;
+
+animation: fadeIn 1.5s ease-in;
+animation-delay:0.8s;
+animation-fill-mode:forwards;
+
+opacity:0;
+}
+@keyframes fadeIn{
+
+from{
+opacity:0;
+}
+
+to{
+opacity:0.8;
+}
+
+}
+
+
+.buttons{
+margin-top:30px;
+display:flex;
+gap:15px;
+animation: buttonPop 0.6s ease-out;
+animation-delay:1.2s;
+animation-fill-mode:forwards;
+
+opacity:0;
+}
+@keyframes buttonPop{
+
+0%{
+transform:scale(0.8);
+opacity:0;
+}
+
+100%{
+transform:scale(1);
+opacity:1;
+}
+
+}
+
+.cta{
+padding:14px 30px;
+border:none;
+border-radius:25px;
+
+background:#5c8dff;
+color:white;
+
+font-size:16px;
+
+box-shadow:0 10px 25px rgba(92,141,255,0.6);
+
+cursor:pointer;
+
+transition:0.3s;
+}
+
+.cta:hover{
+transform:scale(1.05);
+}
+
+
+/* SIGN IN */
+
+.signin{
+padding:14px 30px;
+
+border-radius:25px;
+border:1px solid #5c8dff;
+
+background:transparent;
+color:#5c8dff;
+
+cursor:pointer;
+
+transition:0.3s;
+}
+
+.signin:hover{
+background:#5c8dff;
+color:white;
+}
+
+/* background code */
+.hero::after{
+content:"";
+position:absolute;
+
+bottom:-250px;
+left:50%;
+transform:translateX(-50%);
+
+width:1400px;
+height:500px;
+
+background:radial-gradient(circle,#4c6fff,transparent 70%);
+
+filter:blur(90px);
+
+opacity:0.9;
+
+pointer-events:none;
+} 
